@@ -8,11 +8,34 @@
     */
 
     //ENTRADA
-
+    let totalInvestido = 0;
+    let valor24meses = 0;
+    let rendimento24meses = 0;
+    let valor48meses = 0;
+    let rendimento48meses = 0;
+    let valor96meses = 0;
+    let rendimento96meses = 0;
 
     //PROCESSAMENTO
+    for (let contador = 1; contador <= 96; contador++) {
+    totalInvestido = totalInvestido + 100;
+    totalInvestido = totalInvestido + (totalInvestido * 0.018)
 
+    if (contador === 24) {
+        valor24meses = totalInvestido;
+        rendimento24meses = totalInvestido - (24 * 100);
+    }
+    else if (contador === 48) {
+        valor48meses = totalInvestido;
+        rendimento48meses = totalInvestido - (48 * 100) - rendimento24meses;
+    }
+    else if (contador === 96){
+        valor96meses = totalInvestido * 0.018
+        rendimento96meses = totalInvestido - (96 * 100) - rendimento24meses - rendimento48meses;
+    }
+    
+  }
     
     //SAÍDA
-    
+    document.write(`no mes 24 voce tera investido ${totalInvestido} e rendimento ${rendimento24meses} <br> no mes 48 voce tera investido ${totalInvestido} e rendimento ${rendimento48meses} <br> no mes 96 voce tera investido ${totalInvestido} e rendimento ${rendimento96meses}`)
 </script>
