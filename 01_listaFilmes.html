@@ -11,15 +11,23 @@
     //ENTRADA
 const filmes = Number(prompt("quantos filmes deseja cadastrar?"));
 let comedia = {};
-let drama ={};
-let ro
+let drama = {};
+let romance = {};
 
     //PROCESSAMENTO
 for ( contador = 1; contador <= filmes; contador++) {
     const genero = prompt(`o filme ${contador} é Comédia( c), Drama (d) e Romance(r).`).toUpperCase();
     if ( genero === `C`) {
 comedia.push(filmes)
+    }else if(genero === `D`){
+drama.push(filmes)
+    }else{
+        
     }
+        
+    
+        
+    
 }
     
     //SAÍDA

@@ -9,6 +9,20 @@
     //ENTRADA
 
 
+let peso = Number(prompt("Qual a massa do material?").replace(",", "."));
+
+    let minutos = 0; 
+
+
+    for (minutos = 1; 1< peso; minutos++) {
+        peso = peso / 2;
+    }
+
+    let horas = Math.floor(minutos / 60);
+    minutos = minutos - (horas * 60);
+
+
+    document.write(`Serão necesssários ${horas} horas e ${minutos} minutos para que o peso do material seja menor que 1 grama`);
     //PROCESSAMENTO
 
     
