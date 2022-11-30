@@ -8,11 +8,17 @@
     */
 
     //ENTRADA
+const quantPessoas = Number(prompt("qual a quantidade de pessoas que terão sua medida informada?"));
 
-
+let alturas = []
     //PROCESSAMENTO
-
-    
+for (let contador = 1; contador <= quantPessoas; contador++) {
+    const medida = Number(prompt(`qua a medida da pessoa ${contador}?`))
+    alturas.push(medida)
+}
+    const maior = alturas.sort((a,b) => b-a)
+    const menor = alturas.sort((a,b) => a-b)
     //SAÍDA
-    
+    document.write(`A maior altura é: ${maior}. <br>
+    A menior altura é: ${menor}.`)
 </script>
